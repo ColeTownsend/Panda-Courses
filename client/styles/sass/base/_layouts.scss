@@ -7,3 +7,8 @@
 .container {
   @include outer-container();
 }
+
+.full {
+  width: 100%;
+  overflow-x: hidden;
+}

@@ -31,7 +31,7 @@
   z-index: 10;
   width: 579px;
   p {
-    font-size: 16px;
+    font-size: 18px;
     color: #E2DFF2;
     line-height: 20px;
   }
@@ -61,7 +61,8 @@
     -webkit-transform: scaleY(-1);
     -o-transform: scaleY(-1);
     transform: scaleY(-1);
-    -ms-filter: flipv; /*IE*/
+    -ms-filter: flipv;
+    /*IE*/
     filter: flipv;
   }
 }

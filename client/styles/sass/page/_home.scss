@@ -95,16 +95,17 @@
 }
 
 .social {
-  .social-logo {
-    position: absolute;
-    top: 0;
-    left: -40px;
-    width: 20px;
-    height: auto;
-  }
   .copy-4 {
     @include span-columns(9);
     @include shift(2);
+    position: relative;
+    .social-logo {
+      position: absolute;
+      top: 8px;
+      left: -40px;
+      width: 20px;
+      height: auto;
+    }
   }
   p {
     font-size: 20px;
@@ -121,14 +122,13 @@
     margin-left: 20px;
     opacity: .8;
   }
-  &:before {
-    content: '';
+  .mdash {
     position: absolute;
     top: .55em;
     left: -20px;
     height: 2px;
     width: 12px;
-    background-color: #fff;
+    background: #ffffff;
   }
 }
 
