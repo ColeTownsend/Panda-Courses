@@ -45,4 +45,7 @@ input[type="submit"], button {
     @include transition(background .3s ease-in-out);
     @include transition(box-shadow .3s ease-in-out);
   }
+  &:disabled {
+    background: darken(#77D2BD, 5%);
+  }
 }

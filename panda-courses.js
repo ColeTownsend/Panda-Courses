@@ -28,16 +28,17 @@ if (Meteor.isClient) {
         })
       }
     };
-    setTimeout(show(), 300)
+    setTimeout(show(), 600)
   };
 };
 
+ var subscribeMessage = 'Sign up for early access';
 // You can as well pass different parameters on each call
 var mailChimp = new MailChimp( /* apiKey, { version: '2.0' } */ );
 
 mailChimp.call( 'campaigns', 'list', {
         start: 0,
-        limit: 9999
+        limit: 1000
     },
     // Callback beauty in action
     function ( error, result ) {

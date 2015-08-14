@@ -3,16 +3,14 @@
     {{> MailChimpListSubscribe}}
   </section>
 </template>
-
 <template name="MailChimpListSubscribe">
   <form class="form-inline">
     {{#if message}}
-      <p class="white mb--medium glider">Sign up for early access and get a 20% discount when we launch! <br/> <span class="mailchimp-message">{{message}}</span></p>
-
+      <p class="white mb--medium glider mailchimp-message">{{message}}</p>
     {{/if}}
     <div class="form-group">
-      <input class="mailchimp-email" type="email" placeholder="email@example.com" />
-      <button class="mailchimp-subscribe" type="button">Sign up for early access</button>
+      <input class="mailchimp-email dib" type="email" placeholder="email@example.com" />
+      <button class="mailchimp-subscribe dib" type="button">Sign up for early access</button>
     </div>
   </form>
 </template>
