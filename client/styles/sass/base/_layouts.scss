@@ -1,0 +1,9 @@
+.wrap {
+  width: $max-width;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  @include outer-container();
+}

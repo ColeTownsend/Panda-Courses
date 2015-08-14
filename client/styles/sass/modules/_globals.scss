@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  background-color: $backgroundcolor;
+  color: $bodycolor;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+// iron router
+#iron-router-progress {
+  @include linear-gradient(90deg, darken(#EDF9FD, 5%) 10%, darken(#8CE4D0, 3%) 90%);
+  height: 4px
+}
+
+// responsive images
+img {
+  -ms-interpolation-mode: bicubic;
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+
+// type
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $headerfont;
+}
+
+h1 {
+  font-size: 60px;
+  color: #E9E9E9;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 28px;
+  color: #2E2E33;
+  line-height: 40px;
+}
+
+p {
+  font-family: "Inconsolata";
+  line-height: 30px;
+}
+
+small, .small {
+  font-family: $headerfont;
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  @include transition(opacity .4s ease-in-out);
+  &:hover {
+    opacity: 1;
+    @include transition(opacity .3s ease-in-out);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background: white;
+    opacity: .8;
+    height: 2px;
+    width: 96%;
+    left: 0;
+    bottom: -4px;
+    margin-left: 2%;
+  }
+}

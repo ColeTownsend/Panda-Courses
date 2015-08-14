@@ -1,0 +1,109 @@
+// layout utilities
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.cf {
+  @include clearfix();
+}
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+  &+.dib {
+    margin-left: 20px;
+  }
+}
+
+// type
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+
+.small-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-text-rendering: optimizeLegibility
+}
+
+// removes padding
+.no-padv {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.padv {
+  padding: 25px 0;
+}
+
+.padv--large {
+  padding: 75px 0;
+}
+
+.padb {
+  padding-bottom: 1em;
+}
+.padb--large {
+  padding-bottom: 3em;
+}
+
+.mt {
+  margin-top: 1em;
+}
+
+.mt--large {
+  margin-top: 3em;
+}
+
+.mt--max {
+  margin-top: 75px;
+}
+
+.mb {
+  margin-bottom: 1em;
+}
+
+.mb--small {
+  margin-bottom: .5em;
+}
+
+.mb--medium {
+  margin-bottom: 2em;
+}
+
+.mb--large {
+  margin-bottom: 3em;
+}
+
+.ml {
+  margin-left: .5em;
+}
+
+// type
+.gt {
+  font-family: $headerfont;
+}
+.tsh {
+  text-shadow: 0 2px 1px rgba(0,0,0,.3);
+}
+
+// colors
+.white {
+  color: white;
+}
+
+.gray {
+  font-size: 18px;
+  color: darken(#595960, 20);
+  line-height: 30px;
+}
+
+.opc-50 {
+  opacity: .5;
+}

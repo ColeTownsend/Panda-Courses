@@ -1,0 +1,67 @@
+.logo {
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  top: 20px;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  max-height: 800px;
+  min-height: 600px;
+  width: 100%;
+  background: linear-gradient(-180deg, rgba(68, 65, 90, 0.50) 0%, rgba(68, 65, 90, 0.50) 100%), linear-gradient(-180deg, rgba(124, 83, 169, 0.50) 0%, rgba(0, 0, 0, 0.63) 100%), radial-gradient(50% 70%, #62729B 51%, #4C3A6E 100%);
+  .span-black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    background-blend-mode: darken;
+  }
+}
+
+.copy-1 {
+  position: relative;
+  z-index: 10;
+  width: 579px;
+  p {
+    font-size: 16px;
+    color: #E2DFF2;
+    line-height: 20px;
+  }
+}
+
+// diagonal shape
+.backshape {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -103px;
+    z-index: 100;
+    border-bottom: 103px solid white;
+    border-left: 100vw solid transparent;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -103px;
+    z-index: 100;
+    border-bottom: 103px solid white;
+    border-right: 100vw solid transparent;
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv;
+  }
+}

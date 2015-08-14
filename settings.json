@@ -1,0 +1,8 @@
+{
+  "private": {
+    "MailChimp": {
+        "apiKey": "f4b25872538f0b57ab15b8dabd9a0189-us7",
+        "listId": "5003958752"
+    }
+  }
+}

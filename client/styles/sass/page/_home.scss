@@ -1,0 +1,141 @@
+.copy-block {
+  @include span-columns(5);
+  margin-top: em(160, 16);
+  h3 {
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: #595960;
+    line-height: 30px;
+  }
+}
+
+.omega {
+  @include omega();
+}
+
+.offset-copy {
+  @include shift(6)
+}
+
+.imgset-one {
+  @include span-columns(7);
+  float: none;
+  position: relative;
+  border-radius: 4px;
+  z-index: 5;
+  .img--bottom {
+    width: 760px;
+    height: auto;
+  }
+  .img--top {
+    position: absolute;
+    left: 48px;
+    bottom: 0;
+    width: 620px;
+    height: auto;
+  }
+}
+
+.imgset-two {
+  @include span-columns(7);
+  z-index: 10;
+  position: relative;
+  img {
+    width: 620px;
+    height: auto;
+    @include shift(-2);
+  }
+  margin-top: em(-160, 16);
+}
+
+// section with other hero
+.hero--small {
+  display: block;
+  width: 100%;
+  background: #312D47;
+  min-height: 0;
+}
+
+.copy-2 {
+  @include span-columns(8);
+  @include shift(2);
+  position: relative;
+  z-index: 10;
+  margin-top: 123px;
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: #E2DFF2;
+    line-height: 30px;
+  }
+  img {
+    opacity: .4;
+    margin-top: 60px;
+  }
+}
+
+// copy 3
+.copy-3 {
+  @include span-columns(8);
+  @include shift(2);
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    color: #595960;
+    line-height: 30px;
+  }
+}
+
+.social {
+  .social-logo {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 20px;
+    height: auto;
+  }
+  .copy-4 {
+    @include span-columns(9);
+    @include shift(2);
+  }
+  p {
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 36px;
+    font-weight: normal;
+  }
+  small {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    position: relative;
+    margin-left: 20px;
+    opacity: .8;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: .55em;
+    left: -20px;
+    height: 2px;
+    width: 12px;
+    background-color: #fff;
+  }
+}
+
+.social--medium {
+  background: #2E2E33;
+  p,
+  small {
+    color: #ffffff;
+  }
+}

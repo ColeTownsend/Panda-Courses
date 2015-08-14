@@ -1,0 +1,60 @@
+@import "bourbon/bourbon";
+.flex-parent {
+  @include display(flex);
+  @include align-items(stretch); // Stretch children to fill parent
+  &.fp--row {
+    @include flex-direction(row); // Row Layout
+  }
+  &.fp--column {
+    @include flex-direction(column); // Column Layout
+  }
+  &.fp--wrap {
+    @include flex-wrap(wrap);
+  }
+  &.fp--align-start {
+    @include justify-content(flex-start); // Top Align
+  }
+  &.fp--align-end {
+    @include justify-content(flex-end); // Bottom Align
+  }
+  &.fp--fill-space {
+    @include justify-content(space-between);
+  }
+  &.fp--baseline {
+    @include align-items(baseline);
+  }
+  .flex-child {
+    @include flex(auto);
+    &.fc--static {
+      @include flex(none);
+    }
+    &.fc--1 {
+      @include flex(1);
+    }
+    &.fc--2 {
+      @include flex(2);
+    }
+    &.fc--fill {
+      @include align-self(stretch);
+    }
+    &.fc--start {
+      @include align-self(start);
+    }
+    &.fc--end {
+      @include align-self(flex-end);
+    }
+    &.fc--center {
+      @include align-self(center);
+    }
+  }
+}
+
+.Aligner {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center)
+}
+
+.Aligner-item {
+  @include flex(1);
+}
