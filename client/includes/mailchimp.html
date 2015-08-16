@@ -3,7 +3,25 @@
     {{> MailChimpListSubscribe}}
   </section>
 </template>
+
 <template name="MailChimpListSubscribe">
+  <form class="form-inline">
+    {{#unless isSession "subscribed"}}
+    {{#if message}}
+      <p class="white mb--medium glider mailchimp-message">{{message}}</p>
+    {{/if}}
+    <div class="form-group">
+      <input class="mailchimp-email dib" type="email" placeholder="email@example.com" />
+      <button class="mailchimp-subscribe dib" type="button">Sign up for early access</button>
+    </div>
+    {{/unless}}
+    {{#if isSession 'subscribed'}}
+    <a href="#" class="btn btn--blue">Share on Twitter for an extra 10% off</a>
+    {{/if}}
+  </form>
+</template>
+
+<template name="MailChimpListSubscribeSecondary">
   <form class="form-inline">
     {{#if message}}
       <p class="white mb--medium glider mailchimp-message">{{message}}</p>

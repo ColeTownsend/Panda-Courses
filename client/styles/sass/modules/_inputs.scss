@@ -19,12 +19,12 @@ input[type="text"], input[type="email"] {
   }
 }
 
-input[type="submit"], button {
+input[type="submit"], button, .btn {
   @include box-sizing(border-box);
   border: none;
   outline: none;
   position: relative;
-  top: -1px;
+  top: 0px;
   border-radius: 3px;
   padding: 8px;
   height: 48px;
@@ -47,5 +47,23 @@ input[type="submit"], button {
   }
   &:disabled {
     background: darken(#77D2BD, 5%);
+  }
+}
+
+.btn--blue {
+  text-decoration: none;
+  padding: 8px 12px;
+  width: 320px;
+  text-align: center;
+  line-height: 32px;
+  display: block;
+  background: #59ADEB;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.50);
+  border-radius: 3px;
+  &:hover {
+    background: lighten(#59ADEB, 2%);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.30);
+    @include transition(background .3s ease-in-out);
+    @include transition(box-shadow .3s ease-in-out);
   }
 }
