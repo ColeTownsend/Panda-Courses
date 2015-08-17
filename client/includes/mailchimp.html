@@ -4,15 +4,21 @@
   </section>
 </template>
 
+<template name="subscribeSecondary">
+  <section id="subscribeForm" class="glider">
+    {{> MailChimpListSubscribeSecondary}}
+  </section>
+</template>
+
 <template name="MailChimpListSubscribe">
   <form class="form-inline">
     {{#unless isSession "subscribed"}}
     {{#if message}}
-      <p class="white mb--medium glider mailchimp-message">{{message}}</p>
+      <p class="white mb--medium glider mailchimp-message mc-primary">{{message}}</p>
     {{/if}}
     <div class="form-group">
-      <input class="mailchimp-email dib" type="email" placeholder="email@example.com" />
-      <button class="mailchimp-subscribe dib" type="button">Sign up for early access</button>
+      <input class="mailchimp-email dib mc-primary" type="email" placeholder="email@example.com" />
+      <button class="mailchimp-subscribe dib mc-primary" type="button">Sign up for early access</button>
     </div>
     {{/unless}}
     {{#if isSession 'subscribed'}}
@@ -24,11 +30,11 @@
 <template name="MailChimpListSubscribeSecondary">
   <form class="form-inline">
     {{#if message}}
-      <p class="white mb--medium glider mailchimp-message">{{message}}</p>
+      <p class="white mb--medium glider mailchimp-message mc-secondary">{{message}}</p>
     {{/if}}
     <div class="form-group">
-      <input class="mailchimp-email dib" type="email" placeholder="email@example.com" />
-      <button class="mailchimp-subscribe dib" type="button">Sign up for early access</button>
+      <input class="mailchimp-email mc-secondary dib" type="email" placeholder="email@example.com" />
+      <button class="mailchimp-subscribe mc-secondary dib" type="button">Sign up for early access</button>
     </div>
   </form>
 </template>

@@ -4,7 +4,7 @@
     <div class="Aligner-item">
       <div class="container">
         <div class="copy-1">
-          <h1 class="mb glider">Learn to execute your designs in code.</h1> {{> subscribe location="header"}}
+          <h1 class="mb glider">Learn to execute your designs in code.</h1> {{> subscribe}}
         </div>
       </div>
     </div>
@@ -45,16 +45,16 @@
   <section class="padv--large">
     <div class="container">
       <div class="copy-3">
-      {{#unless isSession "subscribed"}}
-        <h2 class="copy-3-header">Be the first to know.</h2>
-        <p class="mb--large">Get the earliest access to our online courses. Just before we launch, we will send you an email with the discount code. After signing up, there will be more opportunities to save as well!</p>
-        {{> subscribe location="twitter"}}
-      {{/unless}}
-      {{#if isSession "subscribed"}}
-        <h2>You're ahead of the curve already.</h2>
-        <p class="mb--large">Thank you for signing up! First, you'll receive a confirmation email. Then, when we launch, we will send you your coupon code. Share on Twitter to save an extra 10%!</p>
-        <a href="#" class="btn btn--blue">Share on Twitter for an extra 10% off</a>
-      {{/if}}
+        {{#unless isSession "subscribed"}}
+          <h2 class="copy-3-header">Be the first to know.</h2>
+          <p class="mb--large">Get the earliest access to our online courses. Just before we launch, we will send you an email with the discount code. After signing up, there will be more opportunities to save as well!</p>
+          {{> subscribeSecondary }}
+        {{/unless}}
+        {{#if isSession "subscribed"}}
+          <h2>You're ahead of the curve already.</h2>
+          <p class="mb--large">Thank you for signing up! First, you'll receive a confirmation email. Then, when we launch, we will send you your coupon code. Share on Twitter to save an extra 10%!</p>
+          <a href="#" class="btn btn--blue">Share on Twitter for an extra 10% off</a>
+        {{/if}}
       </div>
     </div>
   </section>
