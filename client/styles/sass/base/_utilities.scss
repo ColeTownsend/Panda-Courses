@@ -89,8 +89,16 @@
 .gt {
   font-family: $headerfont;
 }
+.mono {
+  font-family: "Inconsolata", monospace;
+}
 .tsh {
   text-shadow: 0 2px 1px rgba(0,0,0,.3);
+}
+
+.tab {
+  width: 20px;
+  display: inline-block;
 }
 
 // colors

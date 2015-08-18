@@ -8,6 +8,21 @@ if (Meteor.isClient) {
     var listItems = document.querySelectorAll('.glider')
     var i = 0;
     console.log('If you\'re reading this its too late. The animation happened.')
+    var codeText = document.querySelectorAll('.code-text-img')
+
+    function fader() {
+      dynamics.css(codeText, {
+        opacity: 0,
+      })
+      dynamics.animate(codeText, {
+        opacity: 1,
+      }, {
+        type: dynamics.easeIn,
+        duration: 200,
+        friction: 362,
+        delay: 200
+      });
+    };
 
     function show() {
 
@@ -29,11 +44,12 @@ if (Meteor.isClient) {
           frequency: 300,
           friction: 280,
           duration: 800,
-          delay: 80 + i * 40
+          delay: 400 + i * 40
         })
       }
     };
-    setTimeout(show(), 600)
+    show();
+    fader();
   };
 };
 

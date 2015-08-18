@@ -16,7 +16,11 @@
 }
 
 .offset-copy {
-  @include shift(6)
+  @include shift(6);
+  @include media($mobile) {
+    margin: 0 auto;
+    float: none;
+  }
 }
 
 .imgset-one {

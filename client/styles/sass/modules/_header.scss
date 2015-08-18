@@ -21,9 +21,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .4);
     background-blend-mode: darken;
   }
+}
+
+.code-js {
+  width: 400px;
+  display: block;
+  height: auto;
+  z-index: 4;
+  top: 20px;
+  right: 10vw;
+  position: absolute;
 }
 
 .copy-1 {
@@ -48,6 +58,9 @@
     z-index: 100;
     border-bottom: 103px solid white;
     border-left: 100vw solid transparent;
+    @include media($mobile) {
+      content: none;
+    }
   }
   &:after {
     position: absolute;
@@ -64,5 +77,8 @@
     -ms-filter: flipv;
     /*IE*/
     filter: flipv;
+    @include media($mobile) {
+      content: none;
+    }
   }
 }

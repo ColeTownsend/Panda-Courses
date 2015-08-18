@@ -1,0 +1,40 @@
+.code-js .blinker {
+  $timing: 1.3s;
+  display: block;
+  width: 5px;
+  height: 23px;
+  background: white;
+  opacity: .8;
+  position: absolute;
+  top: 296px;
+  left: 60px;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: $timing;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 10;
+
+  -moz-animation-name: blinker;
+  -moz-animation-duration: $timing;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: 10;
+
+  animation-name: blinker;
+  animation-duration: $timing;
+  animation-timing-function: linear;
+  animation-iteration-count: 10;
+}
+@-moz-keyframes blinker {
+  0% { opacity: 0; }
+  50% { opacity: 1.0; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes blinker {
+  0% { opacity: 0; }
+  50% { opacity: 1.0; }
+  100% { opacity: 0; }
+}
+@keyframes blinker {
+  0% { opacity: 0; }
+  50% { opacity: 1.0; }
+  100% { opacity: 0; }
+}
