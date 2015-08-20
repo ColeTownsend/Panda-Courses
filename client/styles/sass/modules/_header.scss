@@ -30,15 +30,19 @@
 }
 
 #typewriter {
-  width: 600px;
+  width: 400px;
   height: 400px;
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 16px;
+  right: -75px;
+  top: 100px;
   color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 16px;
+  line-height: 1.75;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, .2);
   white-space: pre-wrap;
+  opacity: .8;
 }
 
 .code-js {
