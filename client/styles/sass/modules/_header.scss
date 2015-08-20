@@ -24,6 +24,9 @@
     background: rgba(0, 0, 0, .4);
     background-blend-mode: darken;
   }
+  @include media($tablet) {
+    height: 500px;
+  }
 }
 
 .code-js {
@@ -34,6 +37,11 @@
   top: 20px;
   right: 10vw;
   position: absolute;
+  @include media($tablet) {
+    width: 250px;
+    top: 160px;
+    right: 2vw;
+  }
 }
 
 .copy-1 {
@@ -44,6 +52,9 @@
     font-size: 18px;
     color: #E2DFF2;
     line-height: 20px;
+    @include media($tablet) {
+      font-size: 14px;
+    }
   }
 }
 

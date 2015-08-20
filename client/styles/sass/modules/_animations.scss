@@ -1,4 +1,7 @@
 .code-js .blinker {
+  @include media($tablet) {
+    display: none;
+  }
   $timing: 1.3s;
   display: block;
   width: 5px;

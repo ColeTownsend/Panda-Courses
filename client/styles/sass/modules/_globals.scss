@@ -43,25 +43,43 @@ h1 {
   font-size: 60px;
   color: #E9E9E9;
   line-height: 72px;
+  @include media($tablet) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 h2 {
   font-size: 36px;
   line-height: 44px;
+  @include media($tablet) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 h3 {
   font-size: 28px;
   color: #2E2E33;
   line-height: 40px;
+  @include media($tablet) {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 p {
   font-family: "Inconsolata";
   line-height: 30px;
+  font-size: 18px;
+  @include media($tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
-small, .small {
+small,
+.small {
   font-family: $headerfont;
   font-size: 14px;
 }

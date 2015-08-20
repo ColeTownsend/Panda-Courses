@@ -6,6 +6,10 @@
 
 .container {
   @include outer-container();
+  @include media($tablet) {
+    max-width: 680px;
+
+  }
 }
 
 .full {
