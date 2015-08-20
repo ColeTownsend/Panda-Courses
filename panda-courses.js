@@ -13,14 +13,16 @@ if (Meteor.isClient) {
     function fader() {
       dynamics.css(codeText, {
         opacity: 0,
+        blur: 0
       })
       dynamics.animate(codeText, {
         opacity: 1,
+        blur: 10
       }, {
         type: dynamics.easeIn,
         duration: 200,
         friction: 362,
-        delay: 200
+        delay: 100
       });
     };
 
@@ -44,7 +46,7 @@ if (Meteor.isClient) {
           frequency: 300,
           friction: 280,
           duration: 800,
-          delay: 400 + i * 40
+          delay: 600 + i * 40
         })
       }
     };

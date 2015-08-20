@@ -29,6 +29,18 @@
   }
 }
 
+#typewriter {
+  width: 600px;
+  height: 400px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  color: white;
+  white-space: pre-wrap;
+}
+
 .code-js {
   width: 400px;
   display: block;

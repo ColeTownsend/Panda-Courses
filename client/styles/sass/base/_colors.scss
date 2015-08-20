@@ -1,8 +1,0 @@
-@each $color, $value in $accentcolors  {
- .#{$color} {
-   color: $value !important;
- }
-  .#{$color}-bg {
-    background-color: $value !important;
-  }
-}
