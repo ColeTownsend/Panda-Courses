@@ -16,12 +16,12 @@ if (Meteor.isClient) {
           opacity: 1,
           translateY: "30px"
         }, 1, {
-          easing: [200, 20]
+          easing: [220, 18]
         }]
       ]
     });
     $(".glider").velocity("transition.slide", {
-      stagger: 15,
+      stagger: 50,
       drag: true,
       delay: 800
     });

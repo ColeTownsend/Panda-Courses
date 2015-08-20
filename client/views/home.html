@@ -4,7 +4,8 @@
     <div class="Aligner-item">
       <div class="container">
         <div class="copy-1">
-          <h1 class="mb glider">Learn to execute your designs in code.</h1> {{> subscribe}}
+          <h1 class="mb glider">Learn to execute your designs in code.</h1>
+          <div class="cf"></div> {{> subscribe}}
         </div>
       </div>
     </div>
@@ -19,25 +20,29 @@
   <main class="backshape">
     <div class="full">
       <section class="container padv">
-        <div class="copy-block mt--max">
-          <h3 class="mb">Become a full-stack designer</h3>
-          <p>Designers who know how to code are the future of the industry. Understanding programming practices and patterns, creating design systems, and live style guides are the next necessary step. </p>
+        <div class="row">
+          <div class="copy-block mt--max">
+            <h3 class="rel"><img src="layers.png" srcset="layers.png 1x, layers@2x.png, layers@3x.png" class="mobile-icon">Become a full-stack designer</h3>
+            <p>Designers who know how to code are the future of the industry. Understanding programming practices and patterns, creating design systems, and live style guides are the next necessary step. </p>
+          </div>
+          <div class="imgset-one offset-copy omega">
+            <img src="sll-html.png" srcset="sll-html.png 1x, sll-html@2x.png 2x" alt="HTML Markup of Startup Launch List" class="img--top">
+            <img src="sll-screenshot.png" srcset="sll-screenshot.png 1x, sll-screenshot@2x.png 2x" alt="Screenshot of Startup Launch list" class="img--bottom">
+          </div>
         </div>
-        <div class="imgset-one offset-copy omega">
-          <img src="sll-html.png" srcset="sll-html.png 1x, sll-html@2x.png 2x" alt="HTML Markup of Startup Launch List" class="img--top">
-          <img src="sll-screenshot.png" srcset="sll-screenshot.png 1x, sll-screenshot@2x.png 2x" alt="Screenshot of Startup Launch list" class="img--bottom">
-        </div>
-        <div class="imgset-two">
-          <img src="javascript.png" srcset="javascript.png 1x, javascript@2x.png 2x" alt="Meteor Chef teaching how to set up a payment system with Stripe" class="img--bottom">
-        </div>
-        <div class="copy-block omega">
-          <h3>Into the deep end.</h3>
-          <p>There's no theory based intro. We're throwing you straight into the deep end, sans floaties. You'll be working on modern, popular projects from the first minute.</p>
+        <div class="row">
+          <div class="imgset-two">
+            <img src="javascript.png" srcset="javascript.png 1x, javascript@2x.png 2x" alt="Meteor Chef teaching how to set up a payment system with Stripe" class="img--bottom">
+          </div>
+          <div class="copy-block omega offset-copy">
+            <h3 class="rel"><img src="bubbles.png" srcset="bubbles.png 1x, bubbles@2x.png, bubbles@3x.png" class="mobile-icon">Into the deep end.</h3>
+            <p>There's no theory based intro. We're throwing you straight into the deep end, sans floaties. You'll be working on modern, popular projects from the first minute.</p>
+          </div>
         </div>
       </section>
     </div>
   </main>
-  <section class="hero--small padv--large">
+  <section class="hero--small padv--large mobile-hidden">
     <div class="container ">
       <div class="copy-2">
         <h2 class="white">Learn the latest web technologies</h2>
@@ -48,7 +53,7 @@
     <div class="span-black"></div>
     <div class="cf"></div>
   </section>
-  <section class="padv--large">
+  <section class="padv--large mobile-hidden">
     <div class="container">
       <div class="copy-3">
         {{#unless isSession "subscribed"}}
@@ -68,8 +73,8 @@
     <div class="container padv--large ">
       <div class="copy-4">
         <img src="svbtle-logo.png" srcset="svbtle-logo.png 1x, svbtle-logo@2x.png 2x" alt="Svbtle Logo" class="social-logo">
-        <p class="gt mb">If designers want their partners in product and engineering to understand and participate in the design process, we need to be ready to stretch the other way as well. We need to be willing to leave the comfort of our specialty, to understand what our collaborators are dealing with every day. </p>
-        <small class="gt"><span class="mdash"></span>Cap Watkins, <a class="link" target="_blank" href="http://blog.capwatkins.com/why-designers-really-should-learn-to-code?ref=pandacourses">"Why Designers Should Really Learn to Code"</a></small>
+        <p class="mb"><span class="mobile-hidden">If designers want their partners in product and engineering to understand and participate in the design process, we need to be ready to stretch the other way as well.</span> We need to be willing to leave the comfort of our specialty, to understand what our collaborators are dealing with every day. </p>
+        <small class=""><span class="mdash"></span>Cap Watkins, <a class="link" target="_blank" href="http://blog.capwatkins.com/why-designers-really-should-learn-to-code?ref=pandacourses">"Why Designers Should Really Learn to Code"</a></small>
       </div>
     </div>
   </section>

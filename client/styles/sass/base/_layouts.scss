@@ -7,9 +7,15 @@
 .container {
   @include outer-container();
   @include media($tablet) {
-    max-width: 680px;
-
+    max-width: 700px;
   }
+  @include media($mobile) {
+    max-width: 300px;
+  }
+}
+
+.row {
+  @include row();
 }
 
 .full {

@@ -7,6 +7,18 @@
   p {
     color: #595960;
   }
+  @include media($tablet) {
+    @include span-columns(3 of 8);
+    margin-top: em(100, 16);
+  }
+  @include media($mobile) {
+    margin-top: 40px;
+    @include span-columns(4);
+    margin-bottom: 40px;
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .omega {
@@ -14,7 +26,7 @@
 }
 
 .offset-copy {
-  @include shift(6);
+  @include shift(.5);
   @include media($tablet) {
     @include shift(1);
   }
@@ -25,8 +37,7 @@
 }
 
 .imgset-one {
-  @include span-columns(7);
-  float: none;
+  @include span-columns(6);
   position: relative;
   border-radius: 4px;
   z-index: 5;
@@ -39,6 +50,9 @@
   .img--bottom {
     width: 760px;
     height: auto;
+    @include media($tablet) {
+      width: (760px*.7);
+    }
   }
   .img--top {
     position: absolute;
@@ -46,15 +60,18 @@
     bottom: 0;
     width: 620px;
     height: auto;
+    @include media($tablet) {
+      width: (620px*.7);
+    }
   }
 }
 
 .imgset-two {
-  @include span-columns(7);
+  @include span-columns(6);
   z-index: 10;
   position: relative;
   @include media($tablet) {
-    @include span-columns(3);
+    @include span-columns(4);
   }
   @include media($mobile) {
     display: none;
@@ -62,14 +79,18 @@
   img {
     width: 620px;
     height: auto;
+    margin-top: em(-160, 16);
     @include shift(-2);
+    @include media($tablet) {
+      margin-top: em(20, 16);
+      width: (620px*.7);
+      @include shift(-2);
+    }
   }
-  margin-top: em(-160, 16);
 }
 
 // section with other hero
 .hero--small {
-  display: block;
   width: 100%;
   background: #312D47;
   min-height: 0;
@@ -103,6 +124,9 @@
   p {
     color: #595960;
   }
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .social {
@@ -110,12 +134,19 @@
     @include span-columns(9);
     @include shift(2);
     position: relative;
+    @include media($mobile) {
+      @include span-columns(4);
+      @include shift(0);
+    }
     .social-logo {
       position: absolute;
       top: 8px;
       left: -40px;
       width: 20px;
       height: auto;
+      @include media($mobile) {
+        display: none;
+      }
     }
   }
   p {
@@ -123,6 +154,11 @@
     color: #FFFFFF;
     line-height: 36px;
     font-weight: normal;
+    font-family: $headerfont;
+    @include media($mobile) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   small {
     font-size: 16px;
@@ -132,6 +168,13 @@
     position: relative;
     margin-left: 20px;
     opacity: .8;
+    font-family: $headerfont;
+    @include media($mobile) {
+      font-family: $bodyfont;
+      font-size: 10px;
+      color: #FFFFFF;
+      line-height: 15px;
+    }
   }
   .mdash {
     position: absolute;

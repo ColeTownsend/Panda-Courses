@@ -18,7 +18,9 @@
 
 .fade {
   opacity: .3;
-  @include transition(opacity .6s ease-in-out)
+  @include transition(opacity .6s ease-in-out);
+  @include transition(filter .6s ease-in-out);
+  @include filter(blur(1px));
 }
 
 .teletype-cursor {

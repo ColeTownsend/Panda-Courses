@@ -1,5 +1,5 @@
 <template name="subscribe">
-  <section id="subscribeForm" class="">
+  <section id="subscribeForm" class="mobile-fixed">
     {{> MailChimpListSubscribe}}
   </section>
 </template>
@@ -14,7 +14,7 @@
   <form class="form-inline">
     {{#unless isSession "subscribed"}}
     {{#if message}}
-      <p class="white glider mb--medium mailchimp-message mc-primary">{{message}}</p>
+      <p class="white glider mb--medium mailchimp-message mc-primary mobile-hidden">{{message}}</p>
     {{/if}}
     <div class="form-group">
       <input class="mailchimp-email glider dib mc-primary" type="email" placeholder="email@example.com" />
@@ -22,7 +22,7 @@
     </div>
     {{/unless}}
     {{#if isSession 'subscribed'}}
-    <p class="white mb--medium">Thank you! Look for a confirmation email in your inbox.</p>
+    <p class="white mb--medium mobile-hidden">Thank you! Look for a confirmation email in your inbox.</p>
     <a href="#" class="btn btn--blue">Psyched? Tell us why!</a>
     {{/if}}
   </form>

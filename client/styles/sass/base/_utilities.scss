@@ -2,19 +2,34 @@
 .right {
   float: right;
 }
+
 .left {
   float: left;
 }
+
 .cf {
   @include clearfix();
 }
+
+.rel {
+  position: relative;
+}
+
 .db {
   display: block;
 }
+
 .dib {
   display: inline-block;
   &+.dib {
     margin-left: 20px;
+  }
+  @include media($mobile) {
+    display: block;
+    margin-left: 0;
+    &+.dib {
+      margin-left: 0;
+    }
   }
 }
 
@@ -22,6 +37,7 @@
 .tac {
   text-align: center;
 }
+
 .tal {
   text-align: left;
 }
@@ -44,11 +60,15 @@
 
 .padv--large {
   padding: 75px 0;
+  @include media($mobile) {
+    padding: 40px 0;
+  }
 }
 
 .padb {
   padding-bottom: 1em;
 }
+
 .padb--large {
   padding-bottom: 3em;
 }
@@ -89,11 +109,13 @@
 .gt {
   font-family: $headerfont;
 }
+
 .mono {
   font-family: "Inconsolata", monospace;
 }
+
 .tsh {
-  text-shadow: 0 2px 1px rgba(0,0,0,.3);
+  text-shadow: 0 2px 1px rgba(0, 0, 0, .3);
 }
 
 .tab {
