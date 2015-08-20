@@ -101,7 +101,7 @@
         cursor: '▋',
         callbackNext: function(current, teletype) {
           if (current.index == 3) {
-            $('.teletype-text').append('[[[[[ ~/www/panda-courses ]]]]]\n');
+            $('.teletype-text').append('[[[[[ ~/www/panda-courses ]]]]]\n\n');
           }
           if (current.index == 4) {
             $('.teletype-text').append('=> Started proxy.\n=> Started MongoDB.\n\n');
@@ -110,7 +110,7 @@
             $('.teletype-text').append('=> Started your app.\n=> App running at: http://localhost:3000/\n');
           }
           if (current.index == 6) {
-            $('')
+            $(".code-js").addClass("fade")
           }
         }
       });

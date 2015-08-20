@@ -5,36 +5,26 @@ if (Meteor.isClient) {
     }
   });
   Template.home.rendered = function() {
-    var listItems = document.querySelectorAll('.glider')
-    var i = 0;
-    console.log('If you\'re reading this its too late. The animation happened.')
-    var codeText = document.querySelector('.code-js')
-
-    function show() {
-
-      // Animate each line individually
-      for (var i = 0; i < listItems.length; i++) {
-        var listItem = listItems[i]
-          // Define initial properties
-        dynamics.css(listItem, {
-          opacity: 0,
-          translateY: 20
-        })
-
-        // Animate to final properties
-        dynamics.animate(listItem, {
+    console.log('If you\'re reading this its too late. The animation happened.');
+    $.Velocity.RegisterUI("transition.slide", {
+      defaultDuration: 2000,
+      calls: [
+        [{
+          opacity: 0
+        }, .02],
+        [{
           opacity: 1,
-          translateY: 0
-        }, {
-          type: dynamics.spring,
-          frequency: 300,
-          friction: 280,
-          duration: 800,
-          delay: 400 + i * 40
-        })
-      }
-    };
-    show();
+          translateY: "30px"
+        }, 1, {
+          easing: [200, 20]
+        }]
+      ]
+    });
+    $(".glider").velocity("transition.slide", {
+      stagger: 15,
+      drag: true,
+      delay: 800
+    });
   };
 };
 

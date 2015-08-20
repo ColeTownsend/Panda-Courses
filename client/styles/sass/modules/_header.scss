@@ -29,6 +29,12 @@
   }
 }
 
+.glider {
+  opacity: 0;
+  position: relative;
+  top: -60px;
+}
+
 #typewriter {
   width: 400px;
   height: 400px;
@@ -43,6 +49,7 @@
   text-shadow: 0 1px 1px rgba(255, 255, 255, .2);
   white-space: pre-wrap;
   opacity: .8;
+  @include transition(opacity .5s ease-in-out)
 }
 
 .code-js {
