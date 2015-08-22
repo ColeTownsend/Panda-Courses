@@ -26,9 +26,10 @@
     background-blend-mode: darken;
     @include media($mobile) {
       background: url(mobile-bg@2x.png) no-repeat center center;
+      opacity: .5;
     }
   }
-  @include media($tablet) {
+  @include media($mobile) {
     height: 300px;
     min-height: 0;
   }
@@ -56,10 +57,11 @@
   line-height: 1.75;
   text-shadow: 0 1px 1px rgba(255, 255, 255, .2);
   white-space: pre-wrap;
-  opacity: .8;
+  opacity: .6;
   @include transition(opacity .5s ease-in-out);
   @include media($tablet) {
-
+    top: -50px;
+    right: -150px;
   }
   @include media($mobile) {
     display: none;

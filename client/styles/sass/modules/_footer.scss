@@ -4,13 +4,18 @@ footer {
   color: #fff;
   display: block;
   width: 100%;
-  .left {
-    width: 100%;
-    margin-bottom: 20px;
+  @include media($mobile) {
+    padding-bottom: 128px !important;
+    small, .link {
+      margin-bottom: 20px;
+    }
+    .left {
+      width: 100%;
+    }
+    .left,
+    .right {
+      float: none;
+      display: inline-block;
+    }
   }
-  .left,.right {
-    float: none;
-    display: inline-block;
-  }
-  margin-bottom: 96px;
 }

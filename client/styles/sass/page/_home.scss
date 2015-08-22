@@ -7,6 +7,7 @@
   p {
     color: #595960;
   }
+  // media
   @include media($tablet) {
     @include span-columns(3 of 8);
     margin-top: em(100, 16);
@@ -26,7 +27,8 @@
 }
 
 .offset-copy {
-  @include shift(.5);
+  @include shift(1 of 12);
+  // media
   @include media($tablet) {
     @include shift(1);
   }
@@ -37,10 +39,12 @@
 }
 
 .imgset-one {
-  @include span-columns(6);
+  @include span-columns(4);
   position: relative;
-  border-radius: 4px;
+  border-radius: 3px;
   z-index: 5;
+  overflow-x: visible;
+  // media
   @include media($tablet) {
     @include span-columns(3);
   }
@@ -154,6 +158,8 @@
     color: #FFFFFF;
     line-height: 36px;
     font-weight: normal;
+    letter-spacing: 0.03em;
+    text-rendering: optimizeLegibility;
     font-family: $headerfont;
     @include media($mobile) {
       font-size: 12px;
@@ -178,11 +184,21 @@
   }
   .mdash {
     position: absolute;
-    top: .55em;
+    top: .4em;
     left: -20px;
     height: 2px;
     width: 12px;
     background: #ffffff;
+    @include media($tablet) {
+      height: 1px;
+      width: 8px;
+      left: -12px;
+    }
+    @include media($mobile) {
+      height: 1px;
+      width: 8px;
+      left: -12px;
+    }
   }
 }
 

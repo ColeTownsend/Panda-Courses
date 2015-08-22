@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'GT Walsheim Pro Medium';
+  src: url('GT-Walsheim-Pro-Medium.eot'); /* IE9 Compat Modes */
+  src: url('GT-Walsheim-Pro-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('GT-Walsheim-Pro-Medium.woff') format('woff'), /* Modern Browsers */
+       url('GT-Walsheim-Pro-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('GT-Walsheim-Pro-Medium.svg#12d4695fa932d3b4e3cf98cb6c677a3f') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+  unicode-range: U+000-5FF; /* Latin glyphs */
+}
+
