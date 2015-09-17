@@ -39,6 +39,9 @@
   opacity: 0;
   position: relative;
   top: -30px;
+  &.mailchimp-subscribe {
+    top: -32px;
+  }
   @include media($mobile) {
     top: 0;
   }
